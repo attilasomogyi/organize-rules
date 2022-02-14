@@ -1,0 +1,17 @@
+accents_remove: &script |
+  import unidecode
+  env.name = unidecode.unidecode(name)
+
+rules:
+  - name: "Documents organize"
+    locations: ~/Documents
+    filters:
+      - name
+      - extension
+      - created
+    actions:
+      - python:
+          code: *script
+          run_in_simulation: yes
+      - rename: "{env.name.lower().strip().replace(' ','-').replace('_','-')}.{extension.lower()}"
+      - move: "~/Documents/{extension.lower()}/{created.year}/{created.strftime('%m')}/"
