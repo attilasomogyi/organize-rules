@@ -5,6 +5,7 @@ accents_remove: &script |
 rules:
   - name: "Documents organize"
     locations: ~/Documents
+    subfolders: true
     filters:
       - name
       - extension
