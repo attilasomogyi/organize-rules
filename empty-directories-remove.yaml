@@ -1,0 +1,8 @@
+rules:
+  - targets: dirs
+    locations: ~/
+    subfolders: true
+    filters:
+      - empty
+    actions:
+      - trash
