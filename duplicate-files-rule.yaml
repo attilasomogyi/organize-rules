@@ -1,0 +1,9 @@
+rules:
+  - name: "Find all duplicate files"
+    locations: ~/
+    subfolders: true
+    filters:
+      - duplicate
+    actions:
+      - echo: "{duplicate.original}"
+      - echo: "{path}"
