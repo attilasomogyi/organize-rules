@@ -1,4 +1,5 @@
 rules:
+  - name: "Trash all empty directories"
   - targets: dirs
     locations: ~/
     subfolders: true
