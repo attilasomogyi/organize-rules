@@ -1,0 +1,8 @@
+rules:
+  - name: "Trash all empty files"
+    locations: ~/
+    subfolders: true
+    filters:
+      - empty
+    actions:
+      - trash
