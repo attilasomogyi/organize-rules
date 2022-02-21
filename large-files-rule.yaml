@@ -1,0 +1,9 @@
+rules:
+  - name: "Find all large files"
+    locations: "~/"
+    subfolders: true
+    targets: files
+    filters:
+      - size: "> 0.1 GB"
+    actions:
+      - echo: "{path}"
