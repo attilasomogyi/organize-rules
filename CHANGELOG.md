@@ -1,4 +1,4 @@
-Changelog
+# Changelog
 # [0.6.0](https://github.com/attilasomogyi/organize-rules/compare/v0.5.0...v0.6.0) (2022-02-22)
 ### Features
 * **rule:** add large file search rule ([ddbb33c](https://github.com/attilasomogyi/organize-rules/commit/ddbb33c787d99622d5fa42a9c0c5d97f50174c7f))
