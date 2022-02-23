@@ -1,10 +1,13 @@
 accents_remove: &script |
   import unidecode
   env.name = unidecode.unidecode(name)
-
 rules:
   - name: "Documents organize"
-    locations: ~/Documents
+    locations:
+      - ~/Documents
+      - ~/Pictures
+      - ~/Music
+      - ~/Videos
     subfolders: true
     filters:
       - name
@@ -15,4 +18,4 @@ rules:
           code: *script
           run_in_simulation: yes
       - rename: "{env.name.lower().strip().replace(' ','-').replace('_','-')}.{extension.lower()}"
-      - move: "~/Documents/{extension.lower()}/{created.year}/{created.strftime('%m')}/"
+      - move: "{fs.root_path}/{extension.lower()}/{created.year}/{created.strftime('%m')}/"
