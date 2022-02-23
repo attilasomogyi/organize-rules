@@ -1,4 +1,6 @@
-# Changelog
+# [0.7.0](https://github.com/attilasomogyi/organize-rules/compare/v0.6.0...v0.7.0) (2022-02-23)
+### Features
+* **rule:** add multi directory location support ([dc6053b](https://github.com/attilasomogyi/organize-rules/commit/dc6053b2742f44ff0597e6e64cb72d5ae3ad4d06))
 # [0.6.0](https://github.com/attilasomogyi/organize-rules/compare/v0.5.0...v0.6.0) (2022-02-22)
 ### Features
 * **rule:** add large file search rule ([ddbb33c](https://github.com/attilasomogyi/organize-rules/commit/ddbb33c787d99622d5fa42a9c0c5d97f50174c7f))
