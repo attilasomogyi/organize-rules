@@ -14,6 +14,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade organize-tool
+          python3 -m pip install --upgrade unidecode
       - name: Create test directories
         run: mkdir {~/Documents,~/Pictures,~/Music,~/Videos}
       - name: Create test files
