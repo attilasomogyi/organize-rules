@@ -1,0 +1,23 @@
+name: organize rules tests
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+         python3 -m pip install --upgrade
+         python3 -m pip install organize
+      - name: Run organize rule tests
+        run: |
+         organize sim documents-rule.yaml
+         organize sim duplicate-files-rule.yaml
+         organize sim empty-directories-rule.yaml
+         organize sim empty-files-rule.yaml
+         organize sim large-files-rule.yaml
