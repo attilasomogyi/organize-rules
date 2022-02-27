@@ -1,9 +1,9 @@
 name: organize rules tests
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 jobs:
   build:
@@ -12,12 +12,15 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-         python3 -m pip install --upgrade pip
-         python3 -m pip install --upgrade organize-tool
-      - name: Run organize rule tests
-        run: |
-         organize sim documents-rule.yaml
-         organize sim duplicate-files-rule.yaml
-         organize sim empty-directories-rule.yaml
-         organize sim empty-files-rule.yaml
-         organize sim large-files-rule.yaml
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade organize-tool
+      - name: Create test directories
+        run: mkdir {~/Documents,~/Pictures,~/Musics,~/Videos}
+      - name: Create test files
+        run: touch {~/Documents/test1.txt,~/Pictures/test2.txt,~/Musics/test3.txt,~/Videos/test1.txt}
+      - name: Run documents test
+        run: organize sim documents-rule.yaml
+        # organize sim duplicate-files-rule.yaml
+        # organize sim empty-directories-rule.yaml
+        # organize sim empty-files-rule.yaml
+        # organize sim large-files-rule.yaml
