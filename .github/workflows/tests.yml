@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: |
          python3 -m pip install --upgrade pip
-         python3 -m pip install organize
+         python3 -m pip install --upgrade organize-tool
       - name: Run organize rule tests
         run: |
          organize sim documents-rule.yaml
