@@ -15,9 +15,9 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade organize-tool
       - name: Create test directories
-        run: mkdir {~/Documents,~/Pictures,~/Musics,~/Videos}
+        run: mkdir {~/Documents,~/Pictures,~/Music,~/Videos}
       - name: Create test files
-        run: touch {~/Documents/test1.txt,~/Pictures/test2.txt,~/Musics/test3.txt,~/Videos/test1.txt}
+        run: touch {~/Documents/test1.txt,~/Pictures/test2.txt,~/Music/test3.txt,~/Videos/test1.txt}
       - name: Run documents test
         run: organize sim documents-rule.yaml
         # organize sim duplicate-files-rule.yaml
