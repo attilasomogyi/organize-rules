@@ -1,6 +1,8 @@
 name: organize rules tests
 on:
   push:
+    paths-ignore:
+      - '*.md'
     branches: [main]
   pull_request:
     branches: [main]
