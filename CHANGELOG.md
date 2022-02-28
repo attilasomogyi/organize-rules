@@ -1,4 +1,4 @@
-## [0.7.1](https://github.com/attilasomogyi/organize-rules/compare/v0.7.0...v0.7.1) (2022-02-28)
+# [0.7.1](https://github.com/attilasomogyi/organize-rules/compare/v0.7.0...v0.7.1) (2022-02-28)
 ### Bug Fixes
 * **rule:** fix invalid config file ([b9dcec1](https://github.com/attilasomogyi/organize-rules/commit/b9dcec1fc25e7033ad9658e0d1b85574fd02d90b))
 # [0.7.0](https://github.com/attilasomogyi/organize-rules/compare/v0.6.0...v0.7.0) (2022-02-23)
