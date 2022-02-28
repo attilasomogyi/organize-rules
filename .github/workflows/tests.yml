@@ -25,7 +25,11 @@ jobs:
         run: touch {~/Documents/test1.txt,~/Pictures/test2.txt,~/Music/test3.txt,~/Videos/test1.txt}
       - name: Run documents test
         run: organize sim documents-rule.yaml
-        # organize sim duplicate-files-rule.yaml
-        # organize sim empty-directories-rule.yaml
-        # organize sim empty-files-rule.yaml
-        # organize sim large-files-rule.yaml
+      - name: Run duplicate files test
+        run: organize sim duplicate-files-rule.yaml
+      - name: Run empty files test
+        run: organize sim empty-directories-rule.yaml
+      - name: Run empty files test
+        run: organize sim empty-files-rule.yaml
+      - name: Run large files test
+        run: organize sim large-files-rule.yaml
